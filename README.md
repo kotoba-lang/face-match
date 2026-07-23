@@ -36,3 +36,19 @@ caller's contract.
 
 See `90-docs/adr/*-kotoba-lang-face-match.edn` (in the
 `com-junkawasaki/root` superproject) for the design rationale.
+
+## Kotoba bounded profile
+
+`src/face_match/bounded_no_matcher.kotoba` is a capability-free Kotoba
+profile that covers exactly the path above — the only way any caller in
+this org invokes `match` today (no `IFaceMatcher` injected). It is a
+verifiable, sovereign-source guarantee that this system never
+auto-verifies or auto-flags a face-match check on that path; every check
+routes to human review. The `IFaceMatcher` injection seam and any future
+real comparison algorithm stay in `core.cljc`/`ports.cljc` as the general
+oracle. See [migration/bounded-no-matcher-v1.edn](migration/bounded-no-matcher-v1.edn)
+for the full record, including two compiler gaps hit while implementing
+it (an Option-payload type-check gap and a bare `:option-i64` Wasm
+lowering gap — routed around by modeling confidence as a plain bool
+rather than an Option, since this path never has a confidence value to
+represent in the first place).
