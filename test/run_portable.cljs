@@ -15,11 +15,15 @@
 ;; `scripts/verify-cljs-runner-completeness.cljs` checks this file
 ;; against the tree.
 (require '[cljs.test :as t]
+         '[face-match.bounded-profile-test]
          '[face-match.core-test]
-         '[face-match.model-test])
+         '[face-match.model-test]
+         '[face-match.no-auto-adjudication-test])
 
 (defmethod t/report [:cljs.test/default :end-run-tests] [m]
   (when-not (t/successful? m) (set! (.-exitCode js/process) 1)))
 
-(t/run-tests 'face-match.core-test
-              'face-match.model-test)
+(t/run-tests 'face-match.bounded-profile-test
+              'face-match.core-test
+              'face-match.model-test
+              'face-match.no-auto-adjudication-test)
