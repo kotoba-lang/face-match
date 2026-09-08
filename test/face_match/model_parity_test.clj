@@ -15,7 +15,7 @@
 
 (ns face-match.model-parity-test
   (:require [clojure.java.shell :as sh]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [face-match.model :as model]))
 
