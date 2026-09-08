@@ -16,7 +16,7 @@
    say the same thing -- and it fails, rather than passes, when it cannot
    read them."
   (:require [clojure.edn :as edn]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is]]
             [face-match.core :as core]
             #?(:cljs ["fs" :as fs])))
