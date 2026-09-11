@@ -1,8 +1,8 @@
 {:schema "kotoba-face-match-migration/v1"
  :profile :face-match/bounded-no-matcher-v1
- :legacy {:engine "src/face_match/core.cljc"
-          :model "src/face_match/model.cljc"
-          :ports "src/face_match/ports.cljc"
+ :legacy {:engine "src/face_match/core.cljk"
+          :model "src/face_match/model.cljk"
+          :ports "src/face_match/ports.cljk"
           :status :retained-general-oracle}
  :canonical {:engine-and-conformance "src/face_match/bounded_no_matcher.kotoba"}
  :domain
