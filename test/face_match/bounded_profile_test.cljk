@@ -25,8 +25,8 @@
 (def ^:private conformance-path "scripts/verify-kotoba.mjs")
 
 (defn- read-repo-file
-  "Both hosts run this suite from the repository root -- `clojure -M:test`
-   and `nbb --classpath src:test test/run_portable.cljk` alike -- so these
+  "Both hosts run this suite from the repository root -- `kbb -M:test`
+   and `kbb --backend sci --classpath src:test test/run_portable.cljk` alike -- so these
    paths are relative to it. Returns nil rather than throwing; the tests below
    turn nil into a failure with the path in the message."
   [path]
