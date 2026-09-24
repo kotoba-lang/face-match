@@ -13,7 +13,7 @@
    defaults first -- a caller could hand in {:status :verified} and this repo
    would return an auto-approval, which is the single thing README.md and
    MATURITY.md say it will never do."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [face-match.core :as core]
             [face-match.model :as model]
             [face-match.ports :as ports]))

@@ -17,7 +17,7 @@
    read them."
   (:require [clojure.edn :as edn]
             [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is]]
+            [kotoba.test :refer [deftest is]]
             [face-match.core :as core]
             #?(:cljs ["fs" :as fs])))
 
