@@ -1,5 +1,5 @@
 (ns face-match.model-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [face-match.model :as model]))
 
 (deftest compare-result-defaults-to-review-not-implemented

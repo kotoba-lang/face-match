@@ -16,7 +16,7 @@
 (ns face-match.model-parity-test
   (:require [clojure.java.shell :as sh]
             [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [face-match.model :as model]))
 
 ;; Make the namespace name visible in the suite's output even when everything
